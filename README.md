@@ -12,7 +12,8 @@ This test task uses Postgres as a DB. Fill in DATABASE_URI env to make it work.
 
 2. <b>Use Openapi at</b>: `http://localhost:8080/#/`
 
-Task: 
+##Task:  
+
 Add a review system to the backend. Review is given by some user to another user, it has 3 grades: Great/Some Problems/Bad + a text review field. This system should be capable of: adding/creating a review from one user to another user, updating and deleting the review; retrieving all the reviews user got and all the reviews user gave. 
 
 - launch a new local Postgres instance and add its URI to .env 
