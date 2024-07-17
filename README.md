@@ -5,10 +5,7 @@ This test task uses Postgres as a DB. Fill in DATABASE_URI env to make it work.
 ### Quickstart
 1.  <b>Start the App</b>:
   - Using Python:
-    `pipenv run python asgi.py`
-
-  - sing Docker:
-    `docker build -t sqlmodel-api:latest . && docker run -p 8080:8080 sqlmodel-api:latest`
+    `python asgi.py`
 
 2. <b>Use Openapi at</b>: `http://localhost:8080/#/`
 
