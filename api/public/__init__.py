@@ -5,13 +5,14 @@ from api.public.user import views as users
 from api.public.user_info import views as user_infos
 from api.public.listing import views as listings
 from api.public.listing_picture import views as listing_pictures
-from api.public.user_messages_tg import views as user_messages_tg
-from api.public.user_utm_sources import views as user_utm_sources
+# from api.public.user_messages_tg import views as user_messages_tg
+# from api.public.user_utm_sources import views as user_utm_sources
 from api.public.user_access_requests import views as user_accept_requests
 from api.public.payments import views as payments
-from api.public.demands import views as demands
-from api.public.trials import views as trials
-from api.public.stripe_webhooks import views as stripe_webhooks
+from api.public.reviews import views as reviews
+# from api.public.demands import views as demands
+# from api.public.trials import views as trials
+# from api.public.stripe_webhooks import views as stripe_webhooks
 
 
 api = APIRouter()
@@ -54,18 +55,18 @@ api.include_router(
     tags=["ListingPictures"],
     # dependencies=[Depends(authent)],
 )
-api.include_router(
-    user_messages_tg.router,
-    prefix="/user_messages_tg",
-    tags=["UserMessagesTG"],
-    # dependencies=[Depends(authent)],
-)
-api.include_router(
-    user_utm_sources.router,
-    prefix="/user_utm_sources",
-    tags=["UserUtmSources"],
-    # dependencies=[Depends(authent)],
-)
+# api.include_router(
+#     user_messages_tg.router,
+#     prefix="/user_messages_tg",
+#     tags=["UserMessagesTG"],
+#     # dependencies=[Depends(authent)],
+# )
+# api.include_router(
+#     user_utm_sources.router,
+#     prefix="/user_utm_sources",
+#     tags=["UserUtmSources"],
+#     # dependencies=[Depends(authent)],
+# )
 api.include_router(
     user_accept_requests.router,
     prefix="/user_access_requests",
@@ -79,20 +80,26 @@ api.include_router(
     # dependencies=[Depends(authent)],
 )
 api.include_router(
-    demands.router,
-    prefix="/demands",
-    tags=["Demands"],
+    reviews.router,
+    prefix="/reviews",
+    tags=["Reviews"],
     # dependencies=[Depends(authent)],
 )
-api.include_router(
-    trials.router,
-    prefix="/trials",
-    tags=["Trials"],
-    # dependencies=[Depends(authent)],
-)
-api.include_router(
-    stripe_webhooks.router,
-    prefix="/stripe_webhooks",
-    tags=["StripeWebhooks"],
-    # dependencies=[Depends(authent)],
-)
+# api.include_router(
+#     demands.router,
+#     prefix="/demands",
+#     tags=["Demands"],
+#     # dependencies=[Depends(authent)],
+# )
+# api.include_router(
+#     trials.router,
+#     prefix="/trials",
+#     tags=["Trials"],
+#     # dependencies=[Depends(authent)],
+# )
+# api.include_router(
+#     stripe_webhooks.router,
+#     prefix="/stripe_webhooks",
+#     tags=["StripeWebhooks"],
+#     # dependencies=[Depends(authent)],
+# )
